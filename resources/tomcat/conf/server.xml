@@ -19,7 +19,7 @@
 <Server port='-1'>
 
     <Service name='XXXXX'>
-        <Connector port='${http.port}' bindOnInit="false" connectionTimeout="20000" server="dr who"/>
+        <Connector port='${http.port}' bindOnInit="false" connectionTimeout="20000" server="dr who" allowTrace="False"/>
         <Engine defaultHost='localhost' name='XXXXX'>
             <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false" />
             <Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
