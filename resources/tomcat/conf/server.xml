@@ -20,7 +20,6 @@
 
     <Service name='XXXXX'>
         <Connector port='${http.port}' bindOnInit="false" connectionTimeout="20000" server="dr who"/>
-        <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false" />
         <Engine defaultHost='localhost' name='XXXXX'>
             <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false" />
             <Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
@@ -29,6 +28,7 @@
                    enabled="${access.logging.enabled}"/>
             <Host name='localhost'>
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
+                <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false" />
             </Host>
         </Engine>
     </Service>
