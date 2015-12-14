@@ -5,15 +5,12 @@
   version="2.5">
   <servlet>
     <servlet-name>default</servlet-name>
-    <servlet-class>
-      org.apache.catalina.servlets.DefaultServlet
-    </servlet-class>  
+    <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
     <init-param>
-       <param-name>readonly</param-name>
-       <param-value>true</param-value>
+      <param-name>readonly</param-name>
+      <param-value>true</param-value>
     </init-param>
   </servlet>
-
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>restricted methods</web-resource-name>
@@ -29,4 +26,4 @@
     </web-resource-collection>
     <auth-constraint />
   </security-constraint>
-</web-app>  
+</web-app>
